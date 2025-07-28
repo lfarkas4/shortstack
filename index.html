@@ -18,19 +18,19 @@
         <img src="assets/pancake.svg" alt="Pancake Icon" class="pancake-icon" />
 
         <!-- Cards -->
-        <a href="#" class="card-link card-problem">
+        <a href="pages/problem.html" class="card-link card-problem">
           <img src="assets/problem.svg" alt="Problem Card" class="card-svg" />
         </a>
-        <a href="#" class="card-link card-research">
+        <a href="pages/research.html" class="card-link card-research">
           <img src="assets/research.svg" alt="Research Card" class="card-svg" />
         </a>
-        <a href="#" class="card-link card-solution">
+        <a href="pages/solution.html" class="card-link card-solution">
           <img src="assets/solution.svg" alt="Solution Card" class="card-svg" />
         </a>
-        <a href="#" class="card-link card-design">
+        <a href="pages/process.html" class="card-link card-design">
           <img src="assets/designprocess.svg" alt="Design Process Card" class="card-svg" />
         </a>
-        <a href="#" class="card-link card-about">
+        <a href="pages/about.html" class="card-link card-about">
           <img src="assets/aboutus.svg" alt="About Us Card" class="card-svg" />
         </a>
 
@@ -55,5 +55,20 @@
     </div>
 
   </div>
+
+  <!-- Smooth transition logic -->
+  <script>
+    const links = document.querySelectorAll('.card-link');
+    links.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        document.body.classList.add('page-transition');
+        setTimeout(() => {
+          window.location.href = href;
+        }, 400); // must match CSS animation duration
+      });
+    });
+  </script>
 </body>
 </html>
