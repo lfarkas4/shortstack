@@ -1,0 +1,157 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main scroll wrapper */
+.scroll-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* Dotted background */
+.dotted-section {
+  width: 100%;
+  background-image: url("assets/dot.svg");
+  background-repeat: repeat;
+  background-position: center top;
+  background-size: auto;
+  position: relative;
+  z-index: 0;
+  padding-bottom: 0px; /* dotted bg ends where white card begins */
+}
+
+/* White frame container with inner content */
+.white-frame-container {
+  position: relative;
+  width: 100%;
+  max-width: 1275px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  z-index: 2;
+}
+
+/* White frame SVG */
+.white-frame {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.05));
+}
+
+/* Positioned images */
+.frame-message {
+  position: absolute;
+  top: 140px;
+  left: 13px;
+  height: 255px;
+  width: auto;
+}
+
+.pancake-icon {
+  position: absolute;
+  top: 62px;
+  right: 68px;
+  width: 55px;
+  height: 55px;
+}
+
+.stack-logo {
+  position: absolute;
+  bottom: 92px;
+  left: 65px;
+  width: 410px;
+  height: auto;
+}
+
+/* Scroll cue icon */
+.scroll-cue-wrapper {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  margin-top: -40px;
+}
+
+.scroll-cue {
+  position: absolute;
+  top: 55px;
+  right: 145px;
+  width: 230px;
+  height: auto;
+  z-index: 10;
+}
+
+/* White card that scrolls in */
+.white-card-shell {
+  width: 100%;
+  background: white;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  padding-top: 100px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1; /* on top of dotted bg but under white-frame content */
+}
+
+/* Cards */
+.card-link {
+  transition: transform 0.25s ease;
+  display: inline-block;
+  position: absolute;
+}
+
+.card-link:hover {
+  transform: translateY(-10px);
+}
+
+.card-problem { top: 100px; left: 85px; }
+.card-solution { top: 120px; left: 520px; }
+.card-research { top: 250px; left: 295px; }
+.card-design { top: 265px; left: 748px; }
+.card-about { top: 415px; left: 620px; }
+
+.card-svg {
+  width: 320px;
+  height: auto;
+  display: block;
+}
+
+/* Cursor */
+.cursor-wrapper {
+  position: absolute;
+  bottom: 130px;
+  right: 70px;
+  width: 165px;
+  animation: cursor-click 1.8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.cursor-icon {
+  width: 100%;
+  height: auto;
+  transform-origin: bottom right;
+  animation: cursor-rotate 1.8s ease-in-out infinite;
+}
+
+@keyframes cursor-rotate {
+  0%, 100% { transform: rotate(0deg); }
+  20%, 50% { transform: rotate(-10deg); }
+  70% { transform: rotate(0deg); }
+}
+
+/* Footer is part of the white card */
+.page-footer {
+  margin-top: 60px;
+  padding: 80px 0px 25px;
+  background: transparent;
+  color: #6E6F77;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+}
