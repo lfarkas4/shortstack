@@ -66,9 +66,9 @@
         document.body.classList.add('page-transition');
         setTimeout(() => {
           window.location.href = href;
-        }, 400); // must match CSS animation duration
+        }, 150); // faster transition (original was 400ms)
       });
     });
-  </script>
+  </script>  
 </body>
 </html>

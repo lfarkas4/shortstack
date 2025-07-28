@@ -163,16 +163,16 @@ body, html {
 
 /* PAGE TRANSITION ANIMATION */
 body.page-transition {
-  animation: slideFadeOut 0.4s ease forwards;
+  animation: slideFadeOut 0.15s ease forwards;
 }
 
 @keyframes slideFadeOut {
-  0% {
-    transform: translateY(0);
+  from {
     opacity: 1;
+    transform: translateY(0);
   }
-  100% {
-    transform: translateY(-30px);
+  to {
     opacity: 0;
+    transform: translateY(-10px);
   }
 }
