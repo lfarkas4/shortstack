@@ -4,31 +4,131 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Secular+One&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="../popular.css" />
-  <link rel="stylesheet" href="../pages.css" />  
+  <link rel="stylesheet" href="../pages.css" />
+  <link rel="stylesheet" href="../styles/about.css" />
 </head>
 <body class="popular-body">
   <div class="scroll-container">
-    <!-- DOTTED BACKGROUND SECTION -->
     <div class="dotted-section">
-      <!-- Top bar sits on top of the dotted background -->
       <div class="top-bar">
         <a href="../index.html" class="back-button">
           <img src="../assets/arrow.svg" alt="Back Arrow" />
         </a>
-        <img src="../assets/abouttitle.svg" alt="Problem Title" class="section-title" />
+        <img src="../assets/abouttitle.svg" alt="About Us Title" class="section-title" />
       </div>
 
-      <!-- WHITE CARD SHELL starts lower down -->
       <div class="white-card-shell">
-        <!-- PAGE CONTENT GOES HERE -->
-        
-        <!-- Footer -->
+        <div class="about-wrapper">
+
+          <!-- Heading -->
+          <h1 class="about-heading">Meet Team Short Stack</h1>
+
+          <!-- Centered Team Photos -->
+          <div class="profile-row">
+            <div class="profile-card">
+              <img src="../assets/emma.svg" alt="Emma Brown" class="profile-pic active" data-id="emma" />
+              <p class="profile-name">Emma Brown</p>
+            </div>
+            <div class="profile-card">
+              <img src="../assets/allison.svg" alt="Allison Chu" class="profile-pic" data-id="allison" />
+              <p class="profile-name">Allison Chu</p>
+            </div>
+            <div class="profile-card">
+              <img src="../assets/lana.svg" alt="Lana Farkas" class="profile-pic" data-id="lana" />
+              <p class="profile-name">Lana Farkas</p>
+            </div>
+            <div class="profile-card">
+              <img src="../assets/katie.svg" alt="Katie Ulinski" class="profile-pic" data-id="katie" />
+              <p class="profile-name">Katie Ulinski</p>
+            </div>
+            <div class="profile-card">
+              <img src="../assets/sarah.svg" alt="Sarah Yewon Yun" class="profile-pic" data-id="sarah" />
+              <p class="profile-name">Sarah Yewon Yun</p>
+            </div>
+          </div>
+
+          <!-- Bio + Links LEFT ALIGNED under Emma -->
+          <div class="about-content">
+            <p class="bio-text" id="bio">
+              Emma is a Project Manager and Researcher who has a background in Speculative Design. She’s passionate about designing systems with empathy, helping people navigate complexity through clarity, curiosity, and care.
+            </p>
+            <div class="links" id="links">
+              <a href="https://linkedin.com/in/emma-brown-202071203" target="_blank">Linkedin</a>
+              <a href="mailto:mnmlbrown@gmail.com" target="_blank">Email</a>
+            </div>
+          </div>
+        </div>
+
         <footer class="page-footer">
           Copyright © 2025 South Fayette x MHCI. All rights reserved.
         </footer>
       </div>
     </div>
   </div>
+
+  <script>
+    const profiles = {
+      emma: {
+        bio: 'Emma is a Project Manager and Researcher who has a background in Speculative Design. She’s passionate about designing systems with empathy, helping people navigate complexity through clarity, curiosity, and care.',
+        links: [
+          { label: 'Linkedin', url: 'https://linkedin.com/in/emma-brown-202071203' },
+          { label: 'Email', url: 'mailto:mnmlbrown@gmail.com' }
+        ]
+      },
+      allison: {
+        bio: 'Allison is a UX designer and product strategist with a background in Cognitive Science & Human-Computer Interaction. Her work blends systems thinking, research, and storytelling, shaped by experience designing for space systems, healthcare, and education.',
+        links: [
+          { label: 'Linkedin', url: 'https://linkedin.com/in/allison-chu' },
+          { label: 'Email', url: 'mailto:im.allison.chu@gmail.com' }
+        ]
+      },
+      lana: {
+        bio: 'kiwi '.repeat(20),
+        links: [
+          { label: 'Linkedin', url: 'https://linkedin.com/in/lana-farkas-66bb0a246' },
+          { label: 'Email', url: 'mailto:lfarkas@andrew.cmu.edu' }
+        ]
+      },
+      katie: {
+        bio: 'Katie is a researcher who has a background in Psychology and Human Factors. She likes to connect the human needs and elements to a design solution.',
+        links: [
+          { label: 'Linkedin', url: 'https://www.linkedin.com/in/katie-ulinski' },
+          { label: 'Portfolio', url: 'https://katie-u.github.io/Portfolio/' }
+        ]
+      },
+      sarah: {
+        bio: 'Sarah is a designer and creative technologist who has a background in Art and Human-Computer Interaction. Her work spans across XR, interaction design, and systems thinking driven by questions about context user interaction.',
+        links: [
+          { label: 'Linkedin', url: 'https://www.linkedin.com/in/yewon-yun-915056218/' },
+          { label: 'Portfolio', url: 'https://sarahyunsportfolio.squarespace.com/portfolio' }
+        ]
+      }
+    };
+
+    const pics = document.querySelectorAll('.profile-pic');
+    const bioText = document.getElementById('bio');
+    const linksDiv = document.getElementById('links');
+
+    pics.forEach(pic => {
+      pic.addEventListener('click', () => {
+        const id = pic.dataset.id;
+        const info = profiles[id];
+
+        bioText.textContent = info.bio;
+        linksDiv.innerHTML = info.links.map(link =>
+          `<a href="${link.url}" target="_blank">${link.label}</a>`
+        ).join(' ');
+
+        pics.forEach(p => p.classList.remove('active'));
+        pic.classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>

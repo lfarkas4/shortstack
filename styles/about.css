@@ -1,0 +1,87 @@
+/* --- about.css --- */
+
+.about-wrapper {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0px 60px 0px;
+    text-align: center;
+  }
+  
+  .about-heading {
+    font-family: 'Secular One', sans-serif;
+    font-size: 30px;
+    color: #3B3C44;
+    margin-bottom: 55px;
+    text-align: left;
+    margin-left: calc((100% - 1200px) / 2 + 80px); /* aligns with Emma */
+  }
+  
+  .profile-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  
+  .profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 175px;
+    flex-shrink: 0;
+  }
+  
+  .profile-pic {
+    width: 185px;
+    cursor: pointer;
+    transition: filter 0.1s ease;
+    filter: grayscale(100%);
+  }
+  
+  .profile-pic.active {
+    filter: none;
+  }
+  
+  .profile-name {
+    margin-top: 11px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #3B3C44;
+    text-align: center;
+  }
+  
+  /* NEW: left-align bio & links content under photos */
+  .about-content {
+    text-align: left;
+    margin-left: calc((100% - 1200px) / 2 + 80px); /* same as before */
+    max-width: 1200px; /* spans entire team row */
+    width: calc(100% - 120px); /* flexible for responsiveness */
+  }
+  
+  .bio-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #3B3C44;
+    margin-bottom: 60px;
+    line-height: 1.7;
+  }
+  
+  .links {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-bottom: 60px;
+  }
+  
+  .links a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #3B3C44;
+    text-decoration: underline;
+  }
+  
