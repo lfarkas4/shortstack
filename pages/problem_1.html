@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Problem</title>
+  <link rel="stylesheet" href="../popular.css" />
+  <link rel="stylesheet" href="../pages.css" />
+  <link rel="stylesheet" href="../styles/problem.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Secular+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="popular-body">
+  <div class="scroll-container">
+    <div class="dotted-section">
+      <div class="top-bar">
+        <a href="../index.html" class="back-button">
+          <img src="../assets/arrow.svg" alt="Back Arrow" />
+        </a>
+        <img src="../assets/problemtitle.svg" alt="Problem Title" class="section-title" />
+      </div>
+
+      <div class="white-card-shell">
+        <div class="problem-wrapper">
+
+          <!-- Problem Statement -->
+          <div class="problem-hero">
+            <h1 class="problem-heading">Problem Statement</h1>
+            <div class="problem-description">
+              In today's academic environment, high school students are constantly making decisions about what classes to take, what clubs to join, and how to prepare for life after graduation. Even motivated students often struggle to connect their choices to a larger sense of purpose. They are surrounded by opportunities, but don’t always see how those fit together or where they might lead. Many stick with what feels familiar, not because they aren’t curious but because there isn’t a clear path forward.
+            </div>
+          </div>
+
+          <!-- Video Placeholder -->
+          <div class="video-section">
+            <div class="video-container">
+              <video class="embedded-video" controls poster="../assets/video-thumbnail.jpg">
+                <source src="../assets/midsemester_readout_clip.MOV" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="video-text">
+              <div class="video-title">A moment from our Mid-Semester Readout</div>
+              <div class="video-description">
+                A short clip explaining the disconnect between student interests and school structures.
+              </div>
+            </div>
+          </div>
+          
+          
+
+          <!-- Stakeholders Section -->
+          <div class="stakeholders-section">
+            <h2 class="section-heading">Who We Spoke To <span class="highlight">(Stakeholders)</span></h2>
+            <div class="stakeholders-intro">
+              We know that students aren’t navigating high school alone. Their choices and growth are shaped by a larger network of people each with different goals and perspectives. To design for this complex system, we spoke with:
+            </div>
+            <div class="stakeholders-grid">
+              <!-- Student -->
+              <div class="stakeholder-card" onclick="toggleStakeholder(this)">
+                <div class="stakeholder-icon"><i class="fas fa-user-graduate"></i></div>
+                <div class="stakeholder-title">Student</div>
+                <div class="stakeholder-quote">I want to try new things but don’t know where to start.</div>
+                <div class="stakeholder-expanded">
+                  <p>Students today are motivated but often feel overwhelmed by choices. They want personalized guidance that connects their interests to concrete opportunities. Many feel stuck in rigid academic tracks that don't reflect their true passions or potential career paths.</p>
+                </div>
+              </div>
+
+              <!-- Teacher -->
+              <div class="stakeholder-card" onclick="toggleStakeholder(this)">
+                <div class="stakeholder-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                <div class="stakeholder-title">Teacher</div>
+                <div class="stakeholder-quote">Knowing students’ interests lets me shape better lessons.</div>
+                <div class="stakeholder-expanded">
+                  <p>Teachers want to create engaging, relevant curriculum but struggle with large class sizes and limited insight into individual student motivations. They need better tools to understand and connect with each student's unique learning style and interests.</p>
+                </div>
+              </div>
+
+              <!-- Parent -->
+              <div class="stakeholder-card" onclick="toggleStakeholder(this)">
+                <div class="stakeholder-icon"><i class="fas fa-heart"></i></div>
+                <div class="stakeholder-title">Parent</div>
+                <div class="stakeholder-quote">If I knew what motivated my child, I could support them better.</div>
+                <div class="stakeholder-expanded">
+                  <p>Parents want to support their children's growth but often feel disconnected from their school experience. They struggle to balance providing guidance while allowing independence, and need better visibility into their child's interests and progress.</p>
+                </div>
+              </div>
+
+              <!-- Counselor -->
+              <div class="stakeholder-card" onclick="toggleStakeholder(this)">
+                <div class="stakeholder-icon"><i class="fas fa-user-tie"></i></div>
+                <div class="stakeholder-title">Counselor</div>
+                <div class="stakeholder-quote">With limited time per student, it’s hard to build deep connections.</div>
+                <div class="stakeholder-expanded">
+                  <p>School counselors are overwhelmed with caseloads of 200+ students each. They need efficient ways to track student interests, identify at-risk students, and provide meaningful guidance that goes beyond just course scheduling and college applications.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Why This Matters -->
+          <div class="why-matters-section">
+            <h2 class="section-heading">Why This Matters</h2>
+            <div class="why-matters-content">
+              Students hesitate to take risks because they don’t see the value and the system around them doesn’t show it either. Exploration and curiosity can feel confusing or risky. Without the right support or tools, it’s easier to follow the expected path than to imagine new ones.<br /><br />
+              Stack shifts that dynamic. By making students’ progress visible, their options clear, and their decisions feel supported. It helps them explore with purpose instead of pressure. This isn’t just about planning for the future, it’s about giving students more agency in the present.
+            </div>
+          </div>
+
+          <!-- Solution -->
+          <div class="solution-section">
+            <h2 class="solution-title">Our Solution: Stack</h2>
+            <div class="solution-description">
+              Stack makes progress visible, paths clearer, and choices feel supported. It helps students reflect, explore, and act—on their terms.
+            </div>
+            <a href="#" class="cta-button">Learn More About Stack</a>
+          </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+          Copyright © 2025 South Fayette x MHCI. All rights reserved.
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleStakeholder(card) {
+      const allCards = document.querySelectorAll('.stakeholder-card');
+      allCards.forEach(c => {
+        if (c !== card) c.classList.remove('expanded');
+      });
+      card.classList.toggle('expanded');
+    }
+
+    function playVideo() {
+      alert('Video would play here! This is a placeholder for the mid-semester readout video.');
+    }
+  </script>
+</body>
+</html>

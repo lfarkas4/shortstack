@@ -1,0 +1,226 @@
+.problem-wrapper {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0px 60px 0px;
+    text-align: center;
+  }
+  
+  .problem-hero {
+    text-align: left;
+    margin-bottom: 80px;
+  }
+  
+  .problem-heading {
+    font-family: 'Secular One', sans-serif;
+    font-size: 30px;
+    color: #3B3C44;
+    margin-bottom: 55px;
+    text-align: left;
+    margin-left: calc((100% - 1200px) / 2 + 80px);
+  }
+  
+  .problem-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #3B3C44;
+    line-height: 1.7;
+    max-width: 800px;
+    padding: 30px;
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%);
+    border-radius: 16px;
+    border-left: 4px solid #DF44A1;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+  }
+  
+  .video-section {
+    margin-top: 60px;
+    text-align: center;
+  }
+  
+  .video-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .embedded-video {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .video-text {
+    max-width: 800px;
+    margin: 16px auto 0 auto;
+  }
+  
+  .video-title {
+    font-weight: 600;
+    font-size: 18px;
+    color: #1F1F1F;
+    margin-bottom: 4px;
+  }
+  
+  .video-description {
+    font-size: 15px;
+    color: #666;
+    font-style: italic;
+  }
+  
+  
+  .section-heading {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  
+  .stakeholders-section {
+    margin-bottom: 80px;
+  }
+  
+  .stakeholders-intro {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  
+  .stakeholders-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  
+  .stakeholder-card {
+    flex: 1;
+    background: #fff;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    padding: 30px 25px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+  }
+  
+  .stakeholder-card:hover {
+    box-shadow: 0 10px 20px rgba(223, 68, 161, 0.15);
+  }
+  
+  .stakeholder-card.expanded {
+    border-color: #DF44A1;
+    box-shadow: 0 15px 30px rgba(223, 68, 161, 0.25);
+  }
+  
+  .stakeholder-icon {
+    width: 60px;
+    height: 60px;
+    background: #DF44A1;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 24px;
+  }
+  
+  .stakeholder-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  .stakeholder-quote {
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .stakeholder-quote::before,
+  .stakeholder-quote::after {
+    content: '"';
+    color: #DF44A1;
+    font-weight: bold;
+  }
+  
+  .stakeholder-expanded {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.6s ease, opacity 0.4s ease;
+  }
+  
+  .stakeholder-card.expanded .stakeholder-expanded {
+    max-height: 600px; /* Enough for your full paragraph */
+    opacity: 1;
+  }
+  
+  
+  .why-matters-section {
+    margin-bottom: 80px;
+  }
+  
+  .why-matters-content {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    text-align: left;
+    padding: 30px;
+    background: linear-gradient(135deg, #fff0f8, #ffe6f1);
+    border-left: 4px solid #DF44A1;
+    border-radius: 16px;
+  }
+  
+  .solution-section {
+    background: #DF44A1;
+    color: white;
+    border-radius: 24px;
+    padding: 60px 40px;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  
+  .solution-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .solution-description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+  }
+  
+  .cta-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
