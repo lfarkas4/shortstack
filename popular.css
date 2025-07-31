@@ -29,11 +29,14 @@ body, html {
 .white-frame-container {
   position: relative;
   width: 100%;
-  max-width: 1275px;
+  max-width: 1400px;
   margin: 0 auto;
   padding-top: 40px;
   padding-bottom: 50px;
+  padding-inline: clamp(20px, 4vw, 60px);
   z-index: 2;
+  box-sizing: border-box;
+  font-size: clamp(12px, 1.2vw, 20px);
 }
 
 /* White frame SVG */
@@ -41,31 +44,46 @@ body, html {
   width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.05));
+  max-width: 100%;
+  padding-inline: clamp(12px, 3vw, 32px); /* NEW: simulates "visual breathing room" */
+  box-sizing: border-box;
 }
+
+@media (max-width: 768px) {
+  .white-frame {
+    content: url("assets/whiteframe2.svg");
+    padding-inline: clamp(12px, 4vw, 24px); /* keep breathing room */
+  }
+
+  .white-frame-container {
+    max-width: 100%;
+    padding-inline: clamp(12px, 4vw, 24px);
+  }
+}
+
 
 /* Positioned images */
 .frame-message {
   position: absolute;
-  top: 140px;
-  left: 13px;
-  height: 255px;
-  width: auto;
+  top: 12em; /* was 35% */
+  left: 5.6em;  /* was 7.2% */
+  width: 1em;
+  height: auto;
 }
 
 .pancake-icon {
   position: absolute;
-  top: 70px;
-  right: 68px;
-  width: 55px;
-  height: 55px;
+  top: 4em; /* was 11.5% */
+  right: 8.5em;  /* was 11.25% */
+  width: 2.7em;
+  height: auto;
 }
 
 .stack-logo {
   position: absolute;
-  bottom: 92px;
-  left: 65px;
-  width: 410px;
+  bottom: 4.75em; /* was 14% */
+  left: 8em; /* was 11% */
+  width: 22em;
   height: auto;
 }
 
@@ -101,33 +119,53 @@ body, html {
 
 /* Cards */
 .card-link {
-  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, filter 0.25s ease;
   display: inline-block;
   position: absolute;
 }
 
 .card-link:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
+  border-radius: 50px;
 }
 
-.card-problem { top: 100px; left: 85px; }
-.card-solution { top: 120px; left: 520px; }
-.card-research { top: 250px; left: 295px; }
-.card-design { top: 265px; left: 748px; }
-.card-about { top: 415px; left: 620px; }
+.card-problem { top: 16%; left: 13%; }
+.card-solution { top: 18%; left: 44%; }
+.card-research { top: 38%; left: 26%; }
+.card-design { top: 40%; left: 58%; }
+.card-about { top: 61%; left: 49%; }
+
+/* === Individual colored drop shadows === */
+.card-problem:hover {
+  filter: drop-shadow(0px 3px 12px rgba(223, 68, 161, 0.15)); /* pink */
+}
+.card-research:hover {
+  filter: drop-shadow(0px 3px 12px rgba(55, 141, 94, 0.15)); /* blue */
+}
+.card-solution:hover {
+  filter: drop-shadow(0px 3px 12px rgba(31, 149, 175, 0.15)); /* teal */
+}
+.card-design:hover {
+  filter: drop-shadow(0px 3px 12px rgba(223, 208, 0, 0.15)); /* purple */
+}
+.card-about:hover {
+  filter: drop-shadow(0px 3px 12px rgba(133, 63, 196, 0.15)); /* orange */
+}
+
 
 .card-svg {
-  width: 320px;
+  width: 310px;
   height: auto;
   display: block;
 }
 
+
 /* Cursor */
 .cursor-wrapper {
   position: absolute;
-  bottom: 130px;
-  right: 70px;
-  width: 165px;
+  bottom: 20%;
+  right: 12%;
+  width: 155px;
   animation: cursor-click 1.8s ease-in-out infinite;
   pointer-events: none;
 }
@@ -176,4 +214,113 @@ body.page-transition {
     opacity: 0;
     transform: translateY(-10px);
   }
+}
+
+
+
+.card-svg {
+  width: 18em; /* instead of 310px */
+  height: auto;
+}
+
+
+.cursor-wrapper {
+  width: 7.5em; /* scaled from 155px */
+  height: auto;
+}
+
+.mobile-frame-message {
+  display: none;
+}
+.mobile-frame-message img {
+  display: block;
+  width: clamp(14em, 30vw, 22em);
+  height: auto;
+  margin-left: 1em;
+}
+
+
+
+@media (max-width: 768px) {
+  .mobile-frame-message {
+    display: block;
+    position: relative;
+    top: 4vw;
+    left: 5vw;
+    height: auto;
+    z-index: 3;
+  }
+  
+}
+
+
+
+@media (max-width: 768px) {
+  .card-problem { top: 12%; left: 15%; }
+  .card-research { top: 34%; left: 20%; }
+  .card-solution { top: 22.5%; left: 46%; }
+  .card-design { top: 46%; left: 40%; }
+  .card-about { top: 59%; left: 30%; }
+
+  .card-svg {
+    width: 20em; /* same as desktop for consistent scaling */
+  }
+
+  .cursor-wrapper {
+    bottom: 16%;
+    right: 18%;
+    width: 95px;
+  }
+}
+
+@media (max-width: 575px) {
+  .card-svg {
+    width: 16em; /* same as desktop for consistent scaling */
+  }
+  .cursor-wrapper {
+    bottom: 16%;
+    right: 18%;
+    width: 70px;
+  }
+}
+
+@media (max-width: 475px) {
+  .card-svg {
+    width: 14em; /* same as desktop for consistent scaling */
+  }
+  .card-problem { top: 12%; left: 15%; }
+  .card-research { top: 34%; left: 20%; }
+  .card-solution { top: 22.5%; left: 46%; }
+  .card-design { top: 46%; left: 40%; }
+  .card-about { top: 59%; left: 30%; }
+  .cursor-wrapper {
+    bottom: 16%;
+    right: 18%;
+    width: 65px;
+  }
+}
+
+@media (max-width: 425px) {
+  .card-svg {
+    width: 12.5em; /* same as desktop for consistent scaling */
+  }
+  .card-problem { top: 12%; left: 15%; }
+  .card-research { top: 34%; left: 20%; }
+  .card-solution { top: 22.5%; left: 46%; }
+  .card-design { top: 46%; left: 40%; }
+  .card-about { top: 59%; left: 30%; }
+  .cursor-wrapper {
+    bottom: 16%;
+    right: 17%;
+    width: 58px;
+  }
+
+  .mobile-frame-message img {
+    display: block;
+    width: clamp(10em, 28vw, 14em); /* smaller min and max */
+    height: auto;
+    margin-top: 10px;
+    margin-left: 0.5em; /* optional: reduce side margin too */
+  }
+  
 }
