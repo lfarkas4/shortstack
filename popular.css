@@ -51,7 +51,7 @@ body, html {
 
 @media (max-width: 768px) {
   .white-frame {
-    content: url("assets/whiteframe2.svg");
+    content: url("assets/whiteframe2.png");
     padding-inline: clamp(12px, 4vw, 24px); /* keep breathing room */
   }
 
@@ -402,3 +402,351 @@ body.page-transition {
 }
 
 
+
+.overview-section {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  padding: 100px clamp(30px, 6vw, 80px) 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.overview-block {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.overview-header img {
+  display: block;
+  margin-left: 0;
+}
+
+.overview-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 100px;
+  width: 1100px;
+  margin: 0 auto; /* This centers it inside the block */
+}
+
+
+.overview-text {
+  flex: 0.8;
+  min-width: 280px;
+  max-width: 400px;
+}
+
+.overview-text p {
+  font-size: clamp(16px, 1.2vw, 22px);
+  line-height: 1.7;
+  color: #3B3C44;
+  margin-bottom: 50px;
+}
+
+.overview-image {
+  flex: 1.2;
+  min-width: 340px;
+  display: flex;
+  justify-content: center;
+}
+
+.overview-img,
+.overview-media iframe {
+  width: 100%;
+  max-width: 750px;
+  border-radius: 18px;
+  box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.overview-media iframe.wide-video {
+  max-width: 1100px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.overview-button {
+  display: inline-block;
+}
+
+.btn-img {
+  width: clamp(180px, 20vw, 260px);
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .overview-columns {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .overview-text, .overview-image {
+    width: 100%;
+  }
+
+  .overview-text p {
+    text-align: center;
+  }
+
+  .overview-block {
+    align-items: center;
+    text-align: center;
+  }
+
+  .overview-header img {
+    margin: 0 auto;
+  }
+}
+
+.overview-header {
+  padding-inline: clamp(30px, 4.5vw, 80px); /* match overview-section */
+}
+
+.overview-header h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(32px, 2.5vw, 48px);
+  font-weight: 600;
+  color: #3B3C44;
+  margin-bottom: 25px;
+  text-align: left;
+  line-height: 1.2;
+}
+
+
+.overview-header.full-header h2 {
+  text-align: center;
+}
+
+
+/* === Custom fix for first stacked section === */
+.full-width-textvideo {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.full-width-textvideo .overview-text {
+  max-width: 700px;
+  text-align: left;
+  flex: 1;
+}
+
+.full-width-textvideo .overview-text p {
+  margin-left: 0;
+}
+
+.full-width-textvideo .overview-media {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.full-width-textvideo .overview-media iframe {
+  max-width: 1100px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+/* === Stacked layout fix === */
+.overview-text-wide {
+  max-width: 950px;
+  margin: 0 auto 40px;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.overview-media-centered {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.overview-media-centered iframe {
+  max-width: 1100px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Add these styles to your popular.css file */
+
+/* Full-width block styles for Section 1 */
+.full-width-block {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.full-width-block .overview-text-wide {
+  max-width: 1100px;
+  margin: 0 auto 0; /* Remove bottom margin to prevent double spacing */
+  text-align: left;
+  font-size: clamp(16px, 1.2vw, 22px);
+  line-height: 1.7;
+  color: #3B3C44;
+}
+
+.full-width-block .overview-text-wide p {
+  margin-bottom: 0; /* Remove margin to let gap handle spacing */
+  text-align: left;
+}
+
+.overview-media-centered {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.overview-media-centered iframe {
+  max-width: 1100px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure other sections maintain their current styling */
+.overview-block:not(.full-width-block) {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.overview-block:not(.full-width-block) .overview-text p {
+  text-align: left;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 900px) {
+  .full-width-block .overview-text-wide {
+    text-align: left;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  
+  .overview-media-centered iframe {
+    max-width: 100%;
+    margin: 0 20px;
+  }
+}
+
+/* Add this to your popular.css file */
+
+/* Reduce gap specifically for the full-width block (Section 1) */
+.full-width-block {
+  gap: 0px; /* Reduced from 45px */
+}
+
+/* Add this to your popular.css file */
+
+/* Reduce gap specifically for the full-width block (Section 1) */
+.full-width-block {
+  gap: 25px; /* Reduced from 45px */
+}
+
+/* Make the overview section fully responsive */
+@media (max-width: 1200px) {
+  .overview-columns {
+    width: 100%;
+    max-width: 900px;
+    gap: 60px;
+  }
+  
+  .overview-section {
+    padding: 80px clamp(20px, 5vw, 60px) 40px;
+  }
+}
+
+@media (max-width: 950px) {
+  .overview-section {
+    gap: 80px;
+    padding: 60px clamp(20px, 4vw, 40px) 30px;
+  }
+  
+  /* Stack all sections consistently like Section 1 */
+  .overview-columns {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+  }
+
+  /* Reorder elements: Image first, then text */
+  .overview-columns .overview-image {
+    order: 1;
+    width: 100%;
+    max-width: 750px;
+  }
+
+  .overview-columns .overview-text {
+    order: 2;
+    width: 100%;
+    max-width: 950px;
+    min-width: unset;
+    text-align: left;
+  }
+
+  .overview-text p {
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  /* Keep all content left-aligned but centered as a unit */
+  .overview-block {
+    align-items: center;
+    text-align: left;
+  }
+
+  .overview-header {
+    width: 100%;
+    max-width: 950px;
+  }
+
+  .overview-header h2 {
+    text-align: left;
+  }
+  
+  .full-width-block {
+    gap: 25px;
+  }
+  
+  .overview-block:not(.full-width-block) {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .overview-section {
+    gap: 60px;
+    padding: 40px clamp(12px, 3vw, 20px) 20px;
+  }
+  
+  .overview-block {
+    gap: 25px;
+  }
+  
+  .full-width-block {
+    gap: 20px;
+  }
+  
+  .overview-header h2 {
+    margin-bottom: 15px;
+  }
+  
+  .overview-text p {
+    margin-bottom: 30px;
+  }
+  
+  .btn-img {
+    width: clamp(160px, 25vw, 220px);
+  }
+}
