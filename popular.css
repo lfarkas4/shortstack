@@ -240,6 +240,29 @@ body.page-transition {
 }
 
 
+/* === Click Message (Desktop Default) === */
+.click-message-desktop {
+  position: absolute;
+  top: 29%; /* Adjust to be near the process card */
+  left: 73%;
+  width: 6.5em;
+  height: auto;
+  display: block;
+  z-index: 3;
+}
+
+.click-message-mobile {
+  display: none; /* only shown in media query */
+  position: absolute;
+  top: 51%;
+  left: 24%;
+  width: 8em;
+  height: auto;
+  z-index: 3;
+}
+
+
+
 
 @media (max-width: 768px) {
   .mobile-frame-message {
@@ -250,12 +273,6 @@ body.page-transition {
     height: auto;
     z-index: 3;
   }
-  
-}
-
-
-
-@media (max-width: 768px) {
   .card-problem { top: 12%; left: 15%; }
   .card-research { top: 34%; left: 20%; }
   .card-solution { top: 22.5%; left: 46%; }
@@ -271,9 +288,22 @@ body.page-transition {
     right: 18%;
     width: 95px;
   }
+  .click-message-desktop {
+    display: none;
+  }
+
+  .click-message-mobile {
+    display: block;
+    top: 51%;
+    left: 25%;
+    width: 7.5em;
+  }
+  .white-frame-container {
+    padding-top: 37px;
+  }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 585px) {
   .card-svg {
     width: 16em; /* same as desktop for consistent scaling */
   }
@@ -281,6 +311,21 @@ body.page-transition {
     bottom: 16%;
     right: 18%;
     width: 70px;
+  }
+  .click-message-desktop {
+    display: none;
+  }
+
+  .click-message-mobile {
+    display: block;
+  }
+  .click-message-mobile {
+    top: 51%;
+    left: 24%;
+    width: 6em;
+  }
+  .white-frame-container {
+    padding-top: 35px;
   }
 }
 
@@ -297,6 +342,19 @@ body.page-transition {
     bottom: 16%;
     right: 18%;
     width: 65px;
+  }
+  .click-message-desktop {
+    display: none;
+  }
+
+  .click-message-mobile {
+    display: block;
+    width: 5em;
+    top: 52.5%;
+    left: 26%;
+  }
+  .white-frame-container {
+    padding-top: 32px;
   }
 }
 
@@ -322,5 +380,23 @@ body.page-transition {
     margin-top: 10px;
     margin-left: 0.5em; /* optional: reduce side margin too */
   }
-  
+  .click-message-desktop {
+    display: none;
+  }
+
+  .click-message-mobile {
+    display: block;
+    width: 4em;
+    top: 52.5%;
+    left: 26%;
+  }
+  .white-frame-container {
+    padding-top: 27px;
+  }
+}
+
+.card-svg {
+  image-rendering: -webkit-optimize-contrast;
+  backface-visibility: hidden;
+  transform: translateZ(0); /* forces GPU render */
 }
