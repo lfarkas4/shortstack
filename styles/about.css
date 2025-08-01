@@ -8,8 +8,8 @@
   }
   
   .about-heading {
-    font-family: 'Secular One', sans-serif;
     font-size: 30px;
+    weight: 600;
     color: #3B3C44;
     margin-bottom: 55px;
     text-align: left;
