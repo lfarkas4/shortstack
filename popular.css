@@ -322,7 +322,7 @@ body.page-transition {
   .click-message-mobile {
     top: 51%;
     left: 24%;
-    width: 6em;
+    width: 6.2em;
   }
   .white-frame-container {
     padding-top: 35px;
@@ -748,5 +748,257 @@ body.page-transition {
   
   .btn-img {
     width: clamp(160px, 25vw, 220px);
+  }
+}
+
+/* ADD THESE STYLES TO YOUR popular.css */
+
+/* Replace button styles with CTA buttons */
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual button colors (lighter versions) */
+.cta-problem {
+  background: #E85BAD; /* Lighter version of #C92D8B */
+  border-color: #E85BAD;
+}
+
+.cta-problem:hover {
+  background: #EB70B8;
+}
+
+.cta-research {
+  background: #4A8B66; /* Lighter version of #227246 */
+  border-color: #4A8B66;
+}
+
+.cta-research:hover {
+  background: #5BA077;
+}
+
+.cta-solution {
+  background: #3A9BB5; /* Lighter version of #107C94 */
+  border-color: #3A9BB5;
+}
+
+.cta-solution:hover {
+  background: #4FAAC4;
+}
+
+.cta-process {
+  background: #D4713A; /* Lighter version of #BD5906 */
+  border-color: #D4713A;
+}
+
+.cta-process:hover {
+  background: #DE8554;
+}
+
+/* Video styling to match problem page but keep full width */
+.overview-video {
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 18px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 16 / 9;
+}
+
+.video-text-centered {
+  max-width: 1100px;
+  margin: 16px auto 0 auto;
+  text-align: left;
+}
+
+.video-title {
+  font-weight: 600;
+  font-size: 18px;
+  color: #1F1F1F;
+  margin-bottom: 4px;
+}
+
+.video-description {
+  font-size: 15px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Fix alignment issues */
+.overview-section {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  padding: 100px 0 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.overview-block {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  align-items: center; /* Center the block itself */
+  text-align: left;
+  padding: 0 clamp(30px, 6vw, 80px); /* Add responsive padding */
+}
+
+.overview-header {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0; /* Remove extra padding */
+}
+
+.overview-header h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(32px, 2.5vw, 48px);
+  font-weight: 600;
+  color: #3B3C44;
+  margin-bottom: 25px;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.overview-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 100px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Full-width block adjustments */
+.full-width-block {
+  gap: 25px;
+}
+
+.full-width-block .overview-header.full-header h2 {
+  text-align: center;
+}
+
+.full-width-block .overview-text-wide {
+  max-width: 1100px;
+  width: 100%;
+  text-align: left;
+  font-size: clamp(16px, 1.2vw, 22px);
+  line-height: 1.7;
+  color: #3B3C44;
+}
+
+.overview-media-centered {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Update responsive behavior */
+@media (max-width: 1200px) {
+  .overview-columns {
+    max-width: 900px;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 950px) {
+  .overview-section {
+    gap: 80px;
+    padding: 60px clamp(20px, 4vw, 40px) 30px;
+  }
+  
+  .overview-columns {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Reorder elements: Image first, then text */
+  .overview-columns .overview-image {
+    order: 1;
+    width: 100%;
+    max-width: 750px;
+  }
+
+  .overview-columns .overview-text {
+    order: 2;
+    width: 100%;
+    max-width: 100%;
+    min-width: unset;
+    text-align: left;
+  }
+
+  .overview-text p {
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  .overview-header {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .overview-header h2 {
+    text-align: left;
+  }
+  
+  .full-width-block {
+    gap: 25px;
+  }
+  
+  .overview-block:not(.full-width-block) {
+    gap: 30px;
+  }
+
+  /* Keep video and text aligned */
+  .video-text-centered {
+    max-width: 100%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .overview-section {
+    gap: 60px;
+    padding: 40px clamp(12px, 3vw, 20px) 20px;
+  }
+  
+  .overview-block {
+    gap: 25px;
+  }
+  
+  .full-width-block {
+    gap: 20px;
+  }
+  
+  .overview-header h2 {
+    margin-bottom: 15px;
+  }
+  
+  .overview-text p {
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    width: 100%;
+    text-align: center;
+    padding: 12px 24px;
+    font-size: 15px;
   }
 }
