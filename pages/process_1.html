@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <link rel="icon" type="image/svg+xml" href="../assets/pancake.svg" />
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -11,235 +12,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="../popular.css" />
   <link rel="stylesheet" href="../pages.css" />
-  
-  <style>
-    .process-wrapper {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 60px 40px 0px;
-    }
-
-    /* Stats Section */
-    .stats-section {
-      background: white;
-      border: 0px solid #F4D03F;
-      border-radius: 20px;
-      padding: 0px;
-      margin-bottom: 40px;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 30px;
-    }
-
-    .stat-card {
-      text-align: center;
-      padding: 30px 20px;
-      background: white;
-      border: 2px solid #333;
-      border-radius: 15px;
-    }
-
-    .stat-number {
-      font-size: 48px;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 10px;
-      display: block;
-    }
-
-    .stat-label {
-      font-size: 12px;
-      color: #333;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      line-height: 1.3;
-    }
-
-    /* Yellow Section */
-    .yellow-section {
-
-      border: 5px solid #F4D03F;
-      border-radius: 20px;
-      padding: 50px;
-      margin-bottom: 40px;
-    }
-
-    .section-heading {
-      font-size: 32px;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 40px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    /* Key Insights */
-    .insights-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      margin-bottom: 60px;
-    }
-
-    .insight-card {
-      background: white;
-      border-radius: 15px;
-      padding: 30px;
-      border: 2px solid #333;
-    }
-
-    .insight-title {
-      font-size: 16px;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      text-align: center;
-    }
-
-    .insight-description {
-      font-size: 13px;
-      line-height: 1.5;
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    .insight-quote {
-      font-size: 12px;
-      font-style: italic;
-      color: #555;
-      line-height: 1.4;
-      border-top: 1px solid #eee;
-      padding-top: 15px;
-    }
-
-    /* Prototype Learnings */
-    .prototype-section {
-      margin-top: 60px;
-    }
-
-    .prototype-heading {
-      font-size: 28px;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 40px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .prototype-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      margin-bottom: 30px;
-    }
-
-    .prototype-grid:last-child {
-      margin-bottom: 0;
-    }
-
-    .prototype-card {
-      background: white;
-      border-radius: 12px;
-      padding: 20px;
-      border: 2px solid #333;
-      min-height: 120px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .prototype-number {
-      font-size: 18px;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 10px;
-    }
-
-    .prototype-text {
-      font-size: 11px;
-      line-height: 1.4;
-      color: #333;
-      text-transform: uppercase;
-      letter-spacing: 0.3px;
-    }
-
-    .prototype-highlight {
-      background: #E8F5E8;
-    }
-
-    .prototype-highlight .prototype-text {
-      color: #2E7D32;
-    }
-
-
-    .cta-section {
-      position: relative;
-      text-align: center;
-      padding: 40px 0;
-      border-top: 1px solid #e5e5e5;
-      margin-top: 60px; 
-    }
-    .cta-text {
-      font-size: 16px;
-      color: #333;
-      margin-bottom: 20px;
-    }
-    .cta-link {
-      font-size: 14px;
-      color: #007bff;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      font-weight: 500;
-    }
-    .cta-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: white;
-      border: 2px solid #007bff;
-      color: #007bff;
-      padding: 12px 24px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      margin-top: 20px;
-    }
-    .cta-button:hover {
-      background: #007bff;
-      color: white;
-    }
-    .card-image-wrapper {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-top: 0px;
-      margin-bottom: 20px;
-    }
-    .card-link {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      text-align: center;
-    }
-    .card-svg {
-      max-width: 400px;
-      height: auto;
-      display: block;
-      position: static !important;
-
-    }
-
-  </style>
+  <link rel="stylesheet" href="../styles/process.css" />
 </head>
 <body class="popular-body">
   <div class="scroll-container">
@@ -254,162 +27,198 @@
       <div class="white-card-shell">
         <div class="process-wrapper">
 
-          <!-- Stats Section -->
-          <div class="stats-section">
-            <div class="stats-grid">
-              <div class="stat-card">
-                <span class="stat-number">12</span>
-                <div class="stat-label">Parallel prototypes tested</div>
-              </div>
-              <div class="stat-card">
-                <span class="stat-number">150+</span>
-                <div class="stat-label">Stakeholder interviews</div>
-              </div>
-              <div class="stat-card">
-                <span class="stat-number">4</span>
-                <div class="stat-label">Key stakeholder groups</div>
-              </div>
-              <div class="stat-card">
-                <span class="stat-number">3</span>
-                <div class="stat-label">Major design iterations</div>
-              </div>
+          <!-- Section 1: How We Turned Insights into Action -->
+          <section class="process-section">
+            <div class="process-header">
+              <h1>01.</h1><h2>How We Turned Insights into Action</h2>
             </div>
-          </div>
-
-          <!-- Yellow Section -->
-          <div class="yellow-section">
-            <!-- Key Insights -->
-            <h2 class="section-heading">Key Insights</h2>
-            <div class="insights-grid">
-              <div class="insight-card">
-                <div class="insight-title">Guided<br>Reflection</div>
-                <div class="insight-description">
-                  Students need structured ways to reflect on their experiences to build self-awareness, identify patterns, and make more confident decisions.
-                </div>
-                <div class="insight-quote">
-                  "My goal is to give them goal clarity... to understand what they want and why" — Teacher (Campaign Craft, Week 3)
-                </div>
-              </div>
-              <div class="insight-card">
-                <div class="insight-title">Dynamic<br>Visualization</div>
-                <div class="insight-description">
-                  Visualizing growth and connections over time helps students see value in their learning journey, even through pivots or failure.
-                </div>
-                <div class="insight-quote">
-                  "Helps reduce stress and anxiety by showing concrete steps to get to where they want to go." — English Teacher (Bubble Builder, Week 1)
-                </div>
-              </div>
-              <div class="insight-card">
-                <div class="insight-title">Low-Risk<br>Exploration</div>
-                <div class="insight-description">
-                  Personalized recommendations reduce decision fatigue and help students discover meaningful opportunities without the stress of seeking them out.
-                </div>
-                <div class="insight-quote">
-                  "It felt safe for my kid to try things out — like there wasn't a wrong answer." — Parent, Poster Prototype, Week 2
-                </div>
-              </div>
-            </div>
-
-            <!-- Prototype Learnings -->
-            <div class="prototype-section">
-              <h3 class="prototype-heading">What We Learned From Each Prototype</h3>
+            <div class="process-content">
+              <p>Our final solution wasn't built in a vacuum. It emerged through cycles of prototyping, feedback, and iteration. This process was grounded in the voices of students, educators, and families. Each design decision connects directly to what we heard in research.</p>
               
-              <div class="prototype-grid">
-                <div class="prototype-card">
-                  <div class="prototype-number">1</div>
-                  <div class="prototype-text">High school stakeholders value guidance over independence</div>
+              <p>We tested, asked, and refined until our solution reflected the <strong>needs that mattered most</strong>.</p>
+              
+              <div class="process-images">
+                <div class="process-image-container">
+                  <img src="../assets/process1.jpg" alt="Team working on design process" class="process-image" />
                 </div>
-                <div class="prototype-card">
-                  <div class="prototype-number">2</div>
-                  <div class="prototype-text">Students value reflection but they are not always sure how to go about articulating it</div>
-                </div>
-                <div class="prototype-card">
-                  <div class="prototype-number">3</div>
-                  <div class="prototype-text">A visual representation of past experiences can aid in finding direction</div>
-                </div>
-                <div class="prototype-card">
-                  <div class="prototype-number">4</div>
-                  <div class="prototype-text">Reframing skills from the lens of hobbies and personality traits can introduce students to more opportunities</div>
-                </div>
-              </div>
-
-              <div class="prototype-grid">
-                <div class="prototype-card">
-                  <div class="prototype-number">5</div>
-                  <div class="prototype-text">Onboarding needs to be clear to translate outcomes from actions</div>
-                </div>
-                <div class="prototype-card">
-                  <div class="prototype-number">6</div>
-                  <div class="prototype-text">When in an environment in which peers can see posts, motivations become impressing others, inhibiting self-reflection</div>
-                </div>
-                <div class="prototype-card">
-                  <div class="prototype-number">7</div>
-                  <div class="prototype-text">Showing action outcome upfront encourages participation</div>
-                </div>
-                <div class="prototype-card">
-                  <div class="prototype-number">8</div>
-                  <div class="prototype-text">No matter how great the product is, the user interface needs to be clear and intuitive for students to use</div>
-                </div>
-              </div>
-
-              <div class="prototype-grid">
-                <div class="prototype-card">
-                  <div class="prototype-number">9</div>
-                  <div class="prototype-text">Community and shared vulnerability inspire empathy</div>
-                </div>
-                <div class="prototype-card">
-                  <div class="prototype-number">10</div>
-                  <div class="prototype-text">Parents find proof of learning to be important in validating alternative learning methods</div>
-                </div>
-                <div class="prototype-card">
-                  <div class="prototype-number">11</div>
-                  <div class="prototype-text">Giving students guidance — not the most crucial necessity for decision making for students is their own intrinsic motivation</div>
-                </div>
-                <div class="prototype-card">
-                  <div class="prototype-number">12</div>
-                  <div class="prototype-text">Each stakeholder has a unique and important role in student development</div>
+                <div class="process-image-container">
+                  <img src="../assets/process2.jpg" alt="Design iteration wall with sticky notes" class="process-image" />
                 </div>
               </div>
             </div>
-          </div>
+          </section>
+
+          <!-- Section 2: What We Built & What We Learned -->
+          <section class="process-section">
+            <div class="process-header">
+              <h1>02.</h1><h2>What We Built & What We Learned</h2>
+            </div>
+            <div class="process-content">
+              <p>We started our design iteration by testing 3 distinct prototypes, each one tackling a different need. Here are the three core design insights that helped us shape the final solution:</p>
+              
+              <!-- Low-Commitment Exploration -->
+              <div class="insight-block1">
+                <div class="insight-header">
+                  <span class="insight-bullet1">✦</span>
+                  <h3>Low-Commitment Exploration</h3>
+                </div>
+                
+                <div class="what-section">
+                  <h4>What We Heard:</h4>
+                  <p>Students are already juggling intense academic loads. New experiences can feel like just another responsibility.</p>
+                </div>
+                
+                <div class="what-section">
+                  <h4>What We Built:</h4>
+                  <p>Our system includes an <strong> AI recommendation engine</strong> that acts like a <strong>“For You” page for personal development</strong>. Opportunities are personalized and delivered with no extra digging required.</p>
+                  <p><br>So for one of our prototypes, <strong>participants were shown profiles created by ChatGPT</strong> and half were told it was from a human, while half knew it was from AI.</p>
+                </div>
+                
+                <div class="progress-images">
+                  <div class="progress-image-container">
+                    <img src="../assets/progress1.jpg" alt="Student progress tracking visualization" class="progress-image" />
+                  </div>
+                  <div class="progress-image-container">
+                    <img src="../assets/progress2.jpg" alt="Visual growth mapping" class="progress-image" />
+                  </div>
+                </div>
+                
+                <div class="what-section">
+                  <h4>What We Found:</h4>
+                  <p>Trust ratings for the recommendations were nearly identical, whether they came from AI (3.95) or a human (3.8 out of 5). Students cared more about how helpful the suggestions were than where they came from. As one parent reflected, “It felt safe for my kid to try things out, like there wasn’t a wrong answer” (Poster Prototype, Week 2).</p>
+                </div>
+                <div class="key-insight">
+                  <img src="../assets/exclamationicon.png" alt="Key insight" class="insight-icon" />
+                  <p>Students are open to AI-driven exploration when it's low-effort and relevant.</p>
+                </div>
+              </div>
+
+              <!-- Progress Tracking & Visual Growth -->
+              <div class="insight-block2">
+                <div class="insight-header">
+                  <span class="insight-bullet2">✦</span>
+                  <h3>Progress Tracking & Visual Growth</h3>
+                </div>
+                
+                <div class="what-section">
+                  <h4>What We Heard:</h4>
+                  <p>Students rarely get to see how their skills and interests evolve over time. Instead, learning often feels like a disconnected series of grades, projects, or events with little sense of momentum or personal growth.</p>
+                </div>
+                
+                <div class="what-section">
+                  <h4>What We Built:</h4>
+                  <p>We designed <strong>dynamic, evolving visualizations</strong> that showed how students grew through experiences. These tools helped students <strong>track progress across different skills and interests</strong>, not just final outcomes, by mapping their paths into interactive “bubbles.”</p>
+                  <p><br>Students explored <strong>interest-based learning paths</strong> where each activity or class dynamically expanded related “bubbles,” representing emerging skills. As they navigated through the experience, students were able to see how one opportunity could lead to another, helping them connect seemingly separate experiences into a coherent journey.</p>
+                </div>
+                
+                <div class="progress-images">
+                  <div class="progress-image-container">
+                    <img src="../assets/progress3.jpg" alt="Student progress tracking visualization" class="progress-image" />
+                  </div>
+                  <div class="progress-image-container">
+                    <img src="../assets/progress4.jpg" alt="Visual growth mapping" class="progress-image" />
+                  </div>
+                </div>
+                
+                <div class="what-section">
+                  <h4>What We Found:</h4>
+                  <p>Visualization helped students make sense of abstract growth, such as the development of soft skills, by turning it into something more tangible and visible. Teachers also found the visualizations valuable, as one English teacher noted “It helps reduce stress and anxiety by showing concrete steps to get to where they want to go” (Bubble Builder, Week 1).</p>
+                </div>
+                
+                <div class="key-insight">
+                  <img src="../assets/exclamationicon.png" alt="Key insight" class="insight-icon" />
+                  <p>Showing growth visually helps students reflect, explore, and feel proud of their journey.</p>
+                </div>
+              </div>
+
+              <!-- Reflection as a Learning Tool -->
+              <div class="insight-block3">
+                <div class="insight-header">
+                  <span class="insight-bullet3">✦</span>
+                  <h3>Reflection as a Learning Tool</h3>
+                </div>
+                
+                <div class="what-section">
+                  <h4>What We Heard:</h4>
+                  <p>Students struggle to bounce back from failure and often tie success to external measures like grades. True growth comes from processing and reflecting, not avoiding failure.</p>
+                </div>
+                
+                <div class="what-section">
+                  <h4>What We Built:</h4>
+                  <p>In another prototype, we tested what would happen if students could take on <strong>open-ended challenges</strong> posted by teachers. After completing a challenge, students were prompted to <strong>reflect on how it influenced their skills and growth</strong>. This prototype helped surface how reflection can turn even small tasks into meaningful learning moments. </p>
+                  <p><br>We also designed a prototype around <strong>guided reflection</strong> cards to help students revisit experiences, especially ones that didn’t feel successful, and extract value from them. Students were shown peer failure stories, then asked to reflect on their own. We measured mindset shifts through pre- and post-surveys using Likert scales and qualitative prompts.</p>
+                </div>
+                
+                <div class="progress-images">
+                  <div class="progress-image-container">
+                    <img src="../assets/progress5.jpg" alt="Student progress tracking visualization" class="progress-image" />
+                  </div>
+                  <div class="progress-image-container">
+                    <img src="../assets/progress6.jpg" alt="Visual growth mapping" class="progress-image" />
+                  </div>
+                </div>
+                
+                <div class="what-section">
+                  <h4>What We Found:</h4>
+                  <p>Students responded strongly to stories and prompts that helped them reframe past experiences in a more constructive light. These reflection tools contributed to a noticeable rise in motivation scores and gave students a clearer sense of their goals and mindset. As one teacher shared, “It gives them goal clarity… to understand what they want and why.” (Campaign Craft, Week 3).</p>
+                </div>
+                
+                <div class="key-insight">
+                  <img src="../assets/exclamationicon.png" alt="Key insight" class="insight-icon" />
+                  <p>Reflection can reframe failure and help students extract value from challenges.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 3: Final Thoughts -->
+          <section class="process-section final-section">
+            <div class="process-header">
+              <h1>03.</h1><h2>Final Thoughts</h2>
+            </div>
+            <div class="process-content">
+              <p>Each prototype brought us closer to understanding what students truly need, not just structure, but support for exploration, reflection, and growth. Our final design champions a mindset of curiosity, not perfection, helping students build confidence in paths that are uniquely their own.</p>
+              
+              <div class="final-illustration">
+                <img src="../assets/book.gif" alt="Open book with ideas floating above it" class="final-image" />
+              </div>
+            </div>
+          </section>
+
+          <!-- CTA Section -->
+          <section class="cta-section">
+            <hr class="cta-divider" />
+            <div class="cta-top-bar">
+              <h2 class="cta-heading">Want to See More?</h2>
+              <img src="../assets/scrolltotop.svg" alt="Scroll to Top" class="scroll-to-top" onclick="scrollToTop()" />
+            </div>  
+
+            <div class="cta-grid">
+              <div class="cta-card">
+                <img src="../assets/picture3.jpg" alt="Solution Card" class="cta-img" />
+                <p class="cta-description">Take a Look at Our Final Design Solution...</p>
+                <a href="solution_1.html" class="cta-button cta-solution">See the Final Design</a>
+              </div>
+              <div class="cta-card">
+                <img src="../assets/picture1.jpg" alt="Problem Card" class="cta-img" />
+                <p class="cta-description">Explore the Problem We're Solving...</p>
+                <a href="problem_1.html" class="cta-button cta-problem">Explore the Problem</a>
+              </div>
+            </div>
+          </section>
 
         </div>
-
-        <div class="cta-section">
-          <div class="cta-text">TO SEE HOW WE PUT THIS TO USE,</div>
-          <div class="cta-link">CHECK OUT OUR PROCESS &gt;&gt;</div>
-        
-          <div class="card-image-wrapper">
-            <a href="about.html" class="card-link card-solution">
-              <img src="../assets/aboutus.svg" alt="Solution Card" class="card-svg" />
-            </a>
-          </div>
-          
-        </div>
-
         <footer class="page-footer">
           Copyright © 2025 South Fayette x MHCI. All rights reserved.
         </footer>
       </div>
     </div>
   </div>
-
-  <script>
-    // Optional: Add any interactive functionality here
-    document.addEventListener('DOMContentLoaded', function() {
-      // Add hover effects to prototype cards
-      const prototypeCards = document.querySelectorAll('.prototype-card');
-      prototypeCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-          this.style.transform = 'translateY(-5px)';
-          this.style.transition = 'transform 0.3s ease';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-          this.style.transform = 'translateY(0)';
-        });
-      });
-    });
-  </script>
 </body>
 </html>
+
+<script>
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>

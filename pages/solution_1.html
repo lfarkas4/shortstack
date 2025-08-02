@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <link rel="icon" type="image/svg+xml" href="../assets/pancake.svg" />
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -11,237 +12,9 @@
   <!-- Styles -->
   <link rel="stylesheet" href="../popular.css" />
   <link rel="stylesheet" href="../pages.css" />
+  <link rel="stylesheet" href="../styles/solution.css" />
+
   
-  <style>
-    .solution-wrapper {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 60px 40px 0px;
-    }
-
-    .intro-section {
-      margin-bottom: 80px;
-    }
-
-    .intro-headline {
-      font-size: 18px;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 15px;
-      line-height: 1.4;
-    }
-
-    .intro-description {
-      font-size: 16px;
-      line-height: 1.6;
-      color: #666;
-      margin-bottom: 60px;
-    }
-
-    .tool-description {
-      font-size: 18px;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 15px;
-      line-height: 1.4;
-    }
-
-    .tool-subtitle {
-      font-size: 16px;
-      line-height: 1.6;
-      color: #666;
-      margin-bottom: 60px;
-    }
-
-    /* Grade Journey Visualization */
-    .grade-journey {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 60px 0;
-      flex-wrap: wrap;
-      gap: 40px;
-    }
-
-    .grade-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      position: relative;
-    }
-
-    .grade-icon {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: #6B46C1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 24px;
-      margin-bottom: 15px;
-      position: relative;
-    }
-
-    .grade-label {
-      font-size: 14px;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 5px;
-    }
-
-    .grade-subtitle {
-      font-size: 12px;
-      color: #666;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    /* Journey path lines */
-    .grade-item:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      top: 40px;
-      right: -60px;
-      width: 80px;
-      height: 2px;
-      background: #ddd;
-      z-index: -1;
-    }
-
-    .section-heading {
-      font-size: 24px;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 40px;
-      text-align: center;
-    }
-
-    /* Feature sections */
-    .feature-section {
-      margin-bottom: 80px;
-    }
-
-    .feature-row {
-      display: flex;
-      gap: 40px;
-      align-items: center;
-      margin-bottom: 60px;
-    }
-
-    .feature-row:nth-child(even) {
-      flex-direction: row-reverse;
-    }
-
-    .feature-video {
-      flex: 1;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .feature-video video {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 12px;
-    }
-
-    .feature-content {
-      flex: 1;
-      padding: 0 20px;
-    }
-
-    .feature-description {
-      font-size: 16px;
-      line-height: 1.6;
-      color: #555;
-    }
-
-    /* CTA Section */
-    .cta-section {
-      text-align: center;
-      padding: 60px 0;
-      border-top: 1px solid #e5e5e5;
-      margin-top: 80px;
-    }
-
-    .cta-text {
-      font-size: 16px;
-      color: #333;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .cta-link {
-      font-size: 14px;
-      color: #007bff;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      font-weight: 500;
-      margin-bottom: 30px;
-      display: block;
-    }
-
-    .solution-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 15px;
-      background: white;
-      border: 2px solid #007bff;
-      border-radius: 50px;
-      padding: 15px 30px;
-      color: #007bff;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      margin-top: 20px;
-    }
-
-    .solution-badge:hover {
-      background: #007bff;
-      color: white;
-    }
-
-    .solution-icon {
-      width: 8px;
-      height: 8px;
-      background: #007bff;
-      border-radius: 50%;
-    }
-
-    .solution-badge:hover .solution-icon {
-      background: white;
-    }
-
-    .badge-subtitle {
-      font-size: 12px;
-      color: #666;
-      margin-top: 5px;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .feature-row,
-      .feature-row:nth-child(even) {
-        flex-direction: column;
-      }
-      
-      .grade-journey {
-        flex-direction: column;
-        gap: 30px;
-      }
-      
-      .grade-item:not(:last-child)::after {
-        display: none;
-      }
-    }
-  </style>
 </head>
 <body class="popular-body">
   <div class="scroll-container">
@@ -255,225 +28,251 @@
 
       <div class="white-card-shell">
         <div class="solution-wrapper">
-
-          <!-- Intro Section -->
-          <div class="intro-section">
-            <div class="intro-headline">
-              <strong>Stack is a dynamic progress visualizer</strong> helping students reflect, recognize patterns, and explore what's next.
-            </div>
-
-            <video autoplay muted loop playsinline>
-                <source src="../assets/stack-interests.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            
-            <div class="tool-description">
-              <strong>Stack is a tool that grow with you</strong> adapting to every stage of your high school journey.
-            </div>
-          </div>
+          
+          <!-- Introduction Section -->
+          <section class="solution-section intro-section">
+              <p class="stack-title"><strong>Introducing Stack...</strong></p>
+              <p class="stack-definition">a dynamic progress visualizer that helps students <strong>reflect, recognize patterns,</strong> and <strong>explore what's next.</strong></p>
+              
+              <div class="intro-video-container">
+                <video class="intro-video" autoplay muted loop playsinline>
+                  <source src="../DemoVideos/opener.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              
+              <p class="stack-definition">We designed Stack to <strong>grow with students,</strong> supporting their needs at every stage of their high school journey.</p>
+          </section>
 
           <!-- Grade Journey Visualization -->
-          <div class="grade-journey">
-            <div class="grade-item">
-              <div class="grade-label">9th Grade</div>
-              <div class="grade-subtitle">Transition</div>
+          <section class="solution-section journey-section">
+            <div class="final-illustration">
+              <img src="../assets/timeline.png" alt="Open book with ideas floating above it" class="final-image" />
             </div>
-            
-            <div class="grade-item">
-              <div class="grade-label">10th Grade</div>
-              <div class="grade-subtitle">Exploration</div>
-            </div>
-            
-            <div class="grade-item">
-              <div class="grade-label">11th Grade</div>
-              <div class="grade-subtitle">Preparation</div>
-            </div>
-            
-            <div class="grade-item">
-              <div class="grade-label">12th Grade</div>
-              <div class="grade-subtitle">Synthesis</div>
-            </div>
-            
+          </section>
 
           <!-- 9th Grade Section -->
-          <div class="feature-section">
-            <h2 class="section-heading">9th Grade: Setting Up Your Stack Experience</h2>
-            
-            <div class="feature-row">
-              <div class="feature-video">
-                <video autoplay muted loop playsinline>
-                  <source src="../assets/stack-timeline.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div class="feature-content">
+          <section class="solution-section grade-section">
+            <div class="solution-header">
+              <span class="grade-indicator grade-9">✦</span>
+              <h2>9th Grade: Setting Up Your Stack Experience</h2>
+            </div>
+            <div class="solution-content">
+              
+              <div class="feature-item">
+                <div class="feature-video">
+                  <video autoplay muted loop playsinline>
+                    <source src="../DemoVideos/stacktimeline.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
                 <div class="feature-description">
-                  Stack creates a personalized Timeline that visually maps each freshman's academic and extracurricular journey.
+                  <p>A personalized timeline maps academic and extracurricular milestones.
+                  </p>
                 </div>
               </div>
-            </div>
 
-            <div class="feature-row">
-              <div class="feature-video">
-                <video autoplay muted loop playsinline>
-                  <source src="../DemoVideos/9th/9th-p2.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div class="feature-content">
+              <div class="feature-item">
+                <div class="feature-video">
+                  <video autoplay muted loop playsinline>
+                    <source src="../DemoVideos/9th/9th-p2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
                 <div class="feature-description">
-                  Students share their interests, and Stack curates personalized opportunities that match.
+                  <p>Interests unlock curated opportunities tailored to each student.
+                  </p>
                 </div>
               </div>
-            </div>
 
-            <div class="feature-row">
-              <div class="feature-video">
-                <video autoplay muted loop playsinline>
-                  <source src="../DemoVideos/9th/9th-p3.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div class="feature-content">
+              <div class="feature-item">
+                <div class="feature-video">
+                  <video autoplay muted loop playsinline>
+                    <source src="../DemoVideos/9th/9th-p3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
                 <div class="feature-description">
-                  Students browse a centralized hub, with Stack highlighting opportunities based on their evolving interests.
+                  <p>A centralized hub highlights new opportunities based on evolving interests.                  </p>
                 </div>
               </div>
-            </div>
 
-            <div class="feature-row">
-              <div class="feature-video">
-                <video autoplay muted loop playsinline>
-                  <source src="../DemoVideos/9th/9th-p4.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div class="feature-content">
+              <div class="feature-item">
+                <div class="feature-video">
+                  <video autoplay muted loop playsinline>
+                    <source src="../DemoVideos/9th/9th-p4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
                 <div class="feature-description">
-                  Students add opportunities to their wishlist and drag them onto their timeline to see their journey take shape.
+                  <p>Drag saved experiences onto the timeline to plan and shape your story.
+                  </p>
                 </div>
               </div>
+
             </div>
-          </div>
+          </section>
 
           <!-- 10th Grade Section -->
-          <div class="feature-section">
-            <h2 class="section-heading">10th Grade: Exploring Interests to Build Direction</h2>
-            
-            <div class="feature-row">
-              <div class="feature-video">
-                <video autoplay muted loop playsinline>
-                  <source src="../DemoVideos/10th/10th-p1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div class="feature-content">
+          <section class="solution-section grade-section">
+            <div class="solution-header">
+              <span class="grade-indicator grade-10">✦</span>
+              <h2>10th Grade: Exploring Interests to Build Direction</h2>
+            </div>
+            <div class="solution-content">
+              
+              <div class="feature-item">
+                <div class="feature-video">
+                  <video autoplay muted loop playsinline>
+                    <source src="../DemoVideos/10th/10th-p1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
                 <div class="feature-description">
-                  Stack prompts reflection after each activity, helping students recall and evaluate their experiences.<br>
+                  <p>Prompts after each activity help students process and learn from their experiences.
+                  </p>
                 </div>
               </div>
-            </div>
 
-            <div class="feature-row">
-              <div class="feature-video">
-                <video autoplay muted loop playsinline>
-                  <source src="../DemoVideos/10th/10th-p2.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div class="feature-content">
+              <div class="feature-item">
+                <div class="feature-video">
+                  <video autoplay muted loop playsinline>
+                    <source src="../DemoVideos/10th/10th-p2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
                 <div class="feature-description">
-                  Stack helps students spot patterns by organizing experiences and highlighting what they enjoy most.
+                  <p>Visual patterns reveal where students find the most meaning and joy.</p>
                 </div>
               </div>
-            </div>
 
-            <div class="feature-row">
-              <div class="feature-video">
-                <video autoplay muted loop playsinline>
-                  <source src="../DemoVideos/10th/10th-p3.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div class="feature-content">
+              <div class="feature-item">
+                <div class="feature-video">
+                  <video autoplay muted loop playsinline>
+                    <source src="../DemoVideos/10th/10th-p3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
                 <div class="feature-description">
-                  Stack helps students identify interests and plan next steps by turning reflections into personalized recommendations.<br>
+                  <p>Insights from past experiences help students plan their next step.</p>
                 </div>
               </div>
+
             </div>
-          </div>
+          </section>
 
           <!-- 11th & 12th Grade Section -->
-          <div class="feature-section">
-            <h2 class="section-heading">11th & 12th Grade: Finding a Path Forward</h2>
-            
-            <div class="feature-row">
-              <div class="feature-video">
-                <video autoplay muted loop playsinline>
-                  <source src="../assets/stack-growth.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div class="feature-content">
+          <section class="solution-section grade-section">
+            <div class="solution-header">
+              <span class="grade-indicator grade-11">✦</span>
+              <h2>11th & 12th Grade: Finding a Path Forward</h2>
+            </div>
+            <div class="solution-content">
+              
+              <div class="feature-item">
+                <div class="feature-video">
+                  <video autoplay muted loop playsinline>
+                    <source src="../DemoVideos/aiinsights.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
                 <div class="feature-description">
-                  Stack surfaces key moments of growth, helping them recognize patterns, set goals, and confidently share their story with teachers, counselors, and colleges.
+                  <p>Key moments of growth are captured to guide storytelling and goal-setting.</p>
                 </div>
               </div>
-            </div>
 
-            <div class="feature-row">
-              <div class="feature-video">
-                <video autoplay muted loop playsinline>
-                  <source src="../DemoVideos/12th-demo.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div class="feature-content">
+              <div class="feature-item">
+                <div class="feature-video">
+                  <video autoplay muted loop playsinline>
+                    <source src="../DemoVideos/12th-demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
                 <div class="feature-description">
-                  Stack's Future Filter creates personalized pathways that show students how to apply their skills in meaningful contexts.
+                  <p>Future Filter shows how personal strengths map to real-world opportunities.</p>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <!-- Call to Action -->
-          <div class="cta-section">
-            <div class="cta-text">TO SEE HOW WE CAME TO OUR FINAL</div>
-            <div class="cta-link">DESIGN GO TO &gt;&gt;</div>
-            
-            <div class="solution-badge">
-              <div class="solution-icon"></div>
-              <div>
-                <div>SOLUTION</div>
-                <div class="badge-subtitle">Final Design</div>
-              </div>
-              <div style="margin-left: 10px;">•••</div>
             </div>
-          </div>
+          </section>
+
+          <!-- Support System Section -->
+          <section class="solution-section support-section">
+            <div class="solution-header">
+              <span class="grade-indicator support">✦</span>
+              <h2>Support System Touchpoints: Bridging the Gap</h2>
+            </div>
+            <div class="solution-content">
+              
+              <div class="support-grid">
+                <div class="support-item">
+                  <div class="support-image">
+                    <img src="../assets/parent-dashboard.jpg" alt="Parent Dashboard" class="support-img" />
+                  </div>
+                  <div class="support-description">
+                    <h4>For Parents:</h4>
+                    <p>Automatic email updates keep families informed and engaged in the journey.</p>
+                  </div>
+                </div>
+                
+                <div class="support-item">
+                  <div class="support-image">
+                    <img src="../assets/counselor-overview.jpg" alt="Counselor Overview" class="support-img" />
+                  </div>
+                  <div class="support-description">
+                    <h4>For Guidance Counselors:</h4>
+                    <p>Organized timelines and reflections support deeper student check-ins.</p>
+                  </div>
+                </div>
+                
+                <div class="support-item">
+                  <div class="support-image">
+                    <img src="../assets/teacher-directory.jpg" alt="Teacher Directory" class="support-img" />
+                  </div>
+                  <div class="support-description">
+                    <h4>For Teachers:</h4>
+                    <p>Interest trends across classes highlight opportunities for cross-curricular planning.</p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </section>
+
+          <!-- CTA Section -->
+          <section class="cta-section">
+            <hr class="cta-divider" />
+            <div class="cta-top-bar">
+              <h2 class="cta-heading">Want to See More?</h2>
+              <img src="../assets/scrolltotop.svg" alt="Scroll to Top" class="scroll-to-top" onclick="scrollToTop()" />
+            </div>  
+
+            <div class="cta-grid">
+              <div class="cta-card">
+                <img src="../assets/picture4.jpg" alt="Process Card" class="cta-img" />
+                <p class="cta-description">Follow Our Design Process...</p>
+                <a href="process_1.html" class="cta-button cta-process">Explore Our Process</a>
+              </div>
+              <div class="cta-card">
+                <img src="../assets/picture2.jpg" alt="Research Card" class="cta-img" />
+                <p class="cta-description">Learn More About Our Research Insights...</p>
+                <a href="research_1.html" class="cta-button cta-research">View Our Research</a>
+              </div>
+            </div>
+          </section>
 
         </div>
-
         <footer class="page-footer">
           Copyright © 2025 South Fayette x MHCI. All rights reserved.
         </footer>
       </div>
     </div>
   </div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Smooth scrolling for internal links
-      const links = document.querySelectorAll('a[href^="#"]');
-      links.forEach(link => {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-          }
-        });
-      });
-    });
-  </script>
 </body>
 </html>
+
+<script>
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
