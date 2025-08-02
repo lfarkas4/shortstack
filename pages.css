@@ -42,4 +42,8 @@ body {
   }
 }
 
-  
+@media (max-width: 950px) {
+  .top-bar {
+    padding: 12px 20px 0px;
+  }
+}

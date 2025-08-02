@@ -185,14 +185,14 @@ body, html {
 
 /* Footer is part of the white card */
 .page-footer {
-  margin-top: 60px;
-  padding: 80px 0px 25px;
-  background: transparent;
-  color: #6E6F77;
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
+  background: #f8f8f8;
   text-align: center;
-  width: 100%;
+  padding: 30px 10px;
+  font-size: 14px;
+  color: #999;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 45px;
+  border-radius: 16px;
 }
 
 
@@ -970,6 +970,10 @@ body.page-transition {
   .video-text-centered {
     max-width: 100%;
     text-align: left;
+  }
+  .white-card-shell {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
   }
 }
 
